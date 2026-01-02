@@ -71,10 +71,9 @@ Navigateur Web (Dashboard)
 ├── Vib_IOT/
 │   └── server.js
 │   └── public
-├── public/
-│   ├── index.html
-│   ├── style.css (vide)
-│   └── script.js
+          ├── index.html
+          ├── style.css (vide)
+          └── script.js
 ```
 
 ---
