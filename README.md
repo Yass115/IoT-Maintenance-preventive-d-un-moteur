@@ -189,9 +189,6 @@ esp32/mpu6050
 * Modèle d'apprentissage automatique
 * Module MAX9814 pour une meilleure interpretation
 
----
-
-Projet open-source – libre d’utilisation à des fins éducatives ou personnelles.
 
 
 Dis-moi 👍
