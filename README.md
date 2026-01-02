@@ -1,6 +1,7 @@
 # IoT-Maintenance-preventive-d-un-moteur
 
 L’objectif de ce projet est de prélever les données gyroscopiques et vibratoires issues d’un capteur inertiel afin de les analyser dans le domaine fréquentiel à l’aide d’une transformée de Fourier rapide (FFT). Ces informations seront corrélées avec des données auditives (signaux acoustiques) pour mettre en évidence des signatures fréquentielles caractéristiques du fonctionnement d’un moteur. Le couplage des vibrations mécaniques et du bruit émis permet d’identifier des anomalies telles que des déséquilibres, défauts de roulements ou phénomènes de résonance, offrant ainsi une approche de diagnostic prédictif et non invasif pour la surveillance de l’état des moteurs.
+
 ---
 
 #  ESP32 MPU6050 MQTT Dashboard
