@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    background: #232733;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    padding: 30px 20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+}
+.logo { font-size: 26px; font-weight: 600; }
+.logo span { color: #4fa3ff; }
+
+.menu { margin-top: 40px; }
+.menu li {
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+}
+.menu li:hover,
+.menu li.active {
+    background: rgba(255,255,255,0.2);
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.hidden { display: none; }
+
+/* GRAPHS */
+.graphs-container { display: flex; flex-direction: column; gap: 30px; }
+.graph-card {
+    padding: 20px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+}
+
+/* HEALTH CARD */
+.health-card {
+    width: 450px;
+    margin-top: 25px;
+    padding: 25px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.health-indicator {
+    width: 140px;
+    height: 140px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 6px solid rgba(255,255,255,0.2);
+    display: flex; justify-content: center; align-items: center;
+    font-size: 26px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+/* HEALTH STATES */
+.health-indicator.normal  { background:#3ddc84; box-shadow:0 0 20px #3ddc84aa; }
+.health-indicator.warning { background:#ffc93c; box-shadow:0 0 20px #ffc93caa; }
+.health-indicator.danger  { background:#ff4d4d; box-shadow:0 0 20px #ff4d4daa; }
+
+.health-details { text-align:left; margin-top:15px; list-style:none; }
+.health-details li { margin-bottom:8px; }
+
+/* BUTTONS 3D */
+.relay-controls { display:flex; gap:20px; justify-content:center; margin-top:20px; }
+
+.btn {
+    padding: 12px 25px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+    transition: all 0.15s ease-out;
+    font-weight:600;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.25);
+}
+
+.btn.on  { background:#4dff7a; }
+.btn.off { background:#ff4d4d; }
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 0 rgba(0,0,0,0.25);
+}
+.btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 3px 0 rgba(0,0,0,0.25);
+}
+
+/* ANALYSE */
+.analysis-section {
+    background: rgba(255,255,255,0.08);
+    padding: 20px; border-radius: 15px;
+}
+.analysis-report ul { margin-top:20px; padding-left:20px; }
+.analysis-report li { margin-bottom:6px; }
+
+/* DATA */
+.data-section {
+    background: rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:15px;
+}
+#dataTable {
+    width:100%;
+    border-collapse: collapse;
+}
+#dataTable th, #dataTable td {
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard IoT – Moteur MCC</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon IoT -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3209/3209993.png
+
+">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- FFT -->
+    <script src="https://cdn.jsdelivr.net/npm/fft.js/dist/fft.min.js"></script>
+
+    <!-- Script -->
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <h2 class="logo">MCC <span>Lab</span></h2>
+        <ul class="menu">
+            <li class="active">Dashboard</li>
+            <li>Analyse</li>
+            <li>Données</li>
+            <li>Paramètres</li>
+        </ul>
+    </aside>
+
+    <main class="content">
+
+        <!-- DASHBOARD -->
+        <section id="dashboardView">
+            <h1>Dashboard</h1>
+            <p class="subtitle">Données temps réel — Moteur MCC</p>
+
+            <div class="graphs-container">
+                <div class="graph-card">
+                    <h2>Amplitude (Time Domain)</h2>
+                    <canvas id="chartTime"></canvas>
+                </div>
+
+                <div class="graph-card">
+                    <h2>Amplitude (Frequency Domain)</h2>
+                    <canvas id="chartFreq"></canvas>
+                </div>
+            </div>
+
+            <!-- MACHINE HEALTH -->
+            <div class="health-section">
+                <div class="health-card">
+                    <h2>État de la Machine</h2>
+
+                    <div id="healthIndicator" class="health-indicator normal">
+                        <span id="healthStatusText">Normal</span>
+                    </div>
+
+                    <ul class="health-details">
+                        <li>Amplitude RMS : <span id="rmsValue">--</span> g</li>
+                        <li>Pic dominant : <span id="peakFreq">--</span> Hz</li>
+                        <li>Défaut détecté : <span id="faultType">Aucun</span></li>
+                    </ul>
+
+                    <div class="relay-controls">
+                        <button id="relayOn" class="btn on">ON</button>
+                        <button id="relayOff" class="btn off">OFF</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANALYSE SPECTRALE -->
+        <section id="analysisView" class="hidden analysis-section">
+            <h1>Analyse Spectrale</h1>
+            <p class="subtitle">Détection de défauts via FFT</p>
+
+            <canvas id="fftAnalysisChart"></canvas>
+
+            <div class="analysis-report">
+                <h3>Interprétation automatique :</h3>
+                <ul id="analysisList"></ul>
+            </div>
+        </section>
+
+        <!-- DONNÉES -->
+        <section id="dataView" class="hidden data-section">
+            <h1>Données MPU6050</h1>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Horodatage</th>
+                        <th>ax</th>
+                        <th>ay</th>
+                        <th>az</th>
+                        <th>Amplitude</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+    </main>
+
+</body>
+</html>
