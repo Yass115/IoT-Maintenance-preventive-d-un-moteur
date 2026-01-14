@@ -128,7 +128,7 @@ http://localhost:3000
 ---
 
 ## API REST
-
+L'API REST permet à deux applications de communiquer (échange des de données), il est basé sur le protocle HTTP (donc client/serveur)
 ### Récupérer l’historique
 
 ```
